@@ -1,5 +1,6 @@
 const _map = require('./map');
 const _filter = require('./filter');
+const _each_filter = require('./filter/_each_filter.js');
 
 let users = [
   { id: 1, name: "ID", age: 36 },
@@ -19,3 +20,5 @@ console.log(age_list)
 const over_thirty_list = _filter(users, (user) => user.age > 30);
 console.log(over_thirty_list)
 
+// STEP2 _each로 _map _filter 함수 리팩토링
+const over_thirty_list = _each_filter(users, (user) => user.age > 30);
